@@ -5,17 +5,17 @@ const Todos = () => {
   const todos = [
     {
       id: 1,
-      text: "Take out the trash",
+      title: "Take out the trash",
       completed: true,
     },
     {
       id: 2,
-      text: "Grocery shopping",
+      title: "Grocery shopping",
       completed: false,
     },
     {
       id: 3,
-      text: "Clean gecko tank",
+      title: "Clean gecko tank",
       completed: false,
     },
   ];
