@@ -1,11 +1,21 @@
 import React, { useState } from "react";
+import { useActions } from "easy-peasy";
 
 const AddTodo = () => {
   const [title, setTitle] = useState("");
+  const add = useActions((action) => action.add);
 
   return (
     <div>
-      <form>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          add({
+            title,
+            completed: false,
+          });
+        }}
+      >
         <input
           type="text"
           value={title}

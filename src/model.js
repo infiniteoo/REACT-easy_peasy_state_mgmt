@@ -1,5 +1,5 @@
 import { action } from "easy-peasy";
-
+import uuid from "uuid";
 
 export default {
   todos: [
@@ -30,5 +30,9 @@ export default {
   }),
   remove: action((state, id) => {
     state.todos = state.todos.filter((todo) => todo.id !== id);
-  })
+  }),
+  add: action((state, todo) => {
+    todo.id = uuid.v4();
+    state.todos = [...state.todos, todo];
+  }),
 };
