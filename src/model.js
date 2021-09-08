@@ -28,4 +28,7 @@ export default {
       }
     });
   }),
+  remove: action((state, id) => {
+    state.todos = state.todos.filter((todo) => todo.id !== id);
+  })
 };
